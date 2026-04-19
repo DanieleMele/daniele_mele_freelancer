@@ -46,6 +46,18 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Aurora animation */
+  --animate-aurora: aurora 60s linear infinite;
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
 }
 
 :root {
@@ -81,9 +93,132 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Tailwind color CSS variables for aurora component */
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --transparent: transparent;
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --indigo-300: #a5b4fc;
+  --violet-200: #ddd6fe;
+
+  /* Brand tokens — light */
+  --bg: #ffffff;
+  --bg-soft: #f5f4f1;
+  --bg-tint: #ece9e2;
+  --ink: #0a0a0a;
+  --ink-soft: #4a4a4a;
+  --ink-mute: #8a8a8a;
+  --line: #e6e3dc;
+  --brand-accent: #0c2461;
+  --brand-accent-deep: #061a48;
+  --brand-accent-text: #0c2461;
+  --card-bg: #ffffff;
+  --btn-primary-bg: #0c2461;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #0a0a0a;
+  --btn-secondary-border: #0a0a0a;
+  --input-text: #0a0a0a;
+  --input-border: #e6e3dc;
+  --input-focus: #0c2461;
+
+  /* Hero tokens — light */
+  --hero-bg: #ffffff;
+  --hero-text: #0a0a0a;
+  --hero-text-soft: #4a4a4a;
+  --hero-text-mute: #8a8a8a;
+  --hero-line: #e6e3dc;
+  --hero-badge-bg: rgba(0, 0, 0, 0.03);
+  --hero-badge-border: rgba(0, 0, 0, 0.08);
+  --hero-badge-text: #4a4a4a;
+  --hero-badge-dot: #16a34a;
+  --hero-gradient-from: rgba(12, 36, 97, 0.06);
+  --hero-gradient-to: rgba(99, 102, 241, 0.06);
+  --hero-title-a: #0a0a0a;
+  --hero-title-b: #0c2461;
+  --hero-highlight: #0c2461;
+  --hero-cta-primary-bg: #0c2461;
+  --hero-cta-primary-text: #ffffff;
+  --hero-cta-secondary-bg: transparent;
+  --hero-cta-secondary-text: #0a0a0a;
+  --hero-cta-secondary-border: #0a0a0a;
+  --hero-caption: #8a8a8a;
+  --hero-portrait-border: rgba(0, 0, 0, 0.08);
+  --hero-portrait-shadow: rgba(0, 0, 0, 0.05);
+  --hero-overlay-from: rgba(255, 255, 255, 0.6);
+  --hero-nav-text: #0a0a0a;
+  --hero-nav-text-mute: #4a4a4a;
+  --hero-nav-cta-bg: #0c2461;
+  --hero-nav-cta-text: #ffffff;
+  --hero-logo-border: rgba(12, 36, 97, 0.6);
+  --hero-logo-dot: #0c2461;
+  --hero-logo-text: #0a0a0a;
 }
 
-.dark {
+:root.dark {
+  /* Brand tokens — dark */
+  --bg: #030303;
+  --bg-soft: #0a0a0a;
+  --bg-tint: #111111;
+  --ink: #f0f0f0;
+  --ink-soft: #a0a0a0;
+  --ink-mute: #666666;
+  --line: rgba(255, 255, 255, 0.08);
+  --brand-accent: #818cf8;
+  --brand-accent-deep: #6366f1;
+  --brand-accent-text: #a5b4fc;
+  --card-bg: #0f0f0f;
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #030303;
+  --btn-secondary-bg: rgba(255, 255, 255, 0.03);
+  --btn-secondary-text: rgba(255, 255, 255, 0.8);
+  --btn-secondary-border: rgba(255, 255, 255, 0.15);
+  --input-text: #f0f0f0;
+  --input-border: rgba(255, 255, 255, 0.08);
+  --input-focus: #818cf8;
+
+  /* Hero tokens — dark */
+  --hero-bg: #030303;
+  --hero-text: #f0f0f0;
+  --hero-text-soft: rgba(255, 255, 255, 0.4);
+  --hero-text-mute: rgba(255, 255, 255, 0.4);
+  --hero-line: rgba(255, 255, 255, 0.08);
+  --hero-badge-bg: rgba(255, 255, 255, 0.03);
+  --hero-badge-border: rgba(255, 255, 255, 0.08);
+  --hero-badge-text: rgba(255, 255, 255, 0.6);
+  --hero-badge-dot: #f43f5e;
+  --hero-gradient-from: rgba(99, 102, 241, 0.05);
+  --hero-gradient-to: rgba(244, 63, 94, 0.05);
+  --hero-title-a: #ffffff;
+  --hero-title-b: #a5b4fc;
+  --hero-highlight: #a5b4fc;
+  --hero-cta-primary-bg: #ffffff;
+  --hero-cta-primary-text: #030303;
+  --hero-cta-secondary-bg: rgba(255, 255, 255, 0.03);
+  --hero-cta-secondary-text: rgba(255, 255, 255, 0.8);
+  --hero-cta-secondary-border: rgba(255, 255, 255, 0.15);
+  --hero-caption: rgba(255, 255, 255, 0.3);
+  --hero-portrait-border: rgba(255, 255, 255, 0.08);
+  --hero-portrait-shadow: rgba(255, 255, 255, 0.05);
+  --hero-overlay-from: rgba(3, 3, 3, 0.6);
+  --hero-nav-text: rgba(255, 255, 255, 0.9);
+  --hero-nav-text-mute: rgba(255, 255, 255, 0.6);
+  --hero-nav-cta-bg: rgba(255, 255, 255, 0.08);
+  --hero-nav-cta-text: rgba(255, 255, 255, 0.9);
+  --hero-logo-border: rgba(129, 140, 248, 0.6);
+  --hero-logo-dot: #818cf8;
+  --hero-logo-text: rgba(255, 255, 255, 0.9);
+
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -127,4 +262,24 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Status pulse animation */
+@keyframes status-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+  70%  { box-shadow: 0 0 0 7px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+/* Marquee animation */
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Check pop animation */
+@keyframes check-pop {
+  0%   { transform: scale(0.4); opacity: 0; }
+  60%  { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }

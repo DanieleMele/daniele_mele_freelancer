@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex, follow">
+<meta name="description" data-i18n="meta.description" content="Datenschutzerklärung — Daniele Mele, Webdesign & Webentwicklung aus der Schweiz.">
+<title data-i18n="meta.title">Datenschutz — Daniele Mele</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='2' width='28' height='28' fill='%23ffffff' stroke='%230c2461' stroke-width='3'/><rect x='18' y='6' width='8' height='8' fill='%230c2461'/></svg>">
+
+<style>html{background:#ffffff}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f5f4f1;
+    --ink: #0a0a0a;
+    --ink-soft: #4a4a4a;
+    --ink-mute: #8a8a8a;
+    --line: #e6e3dc;
+    --accent: #0c2461;
+    --accent-deep: #061a48;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink-soft);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; }
+
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  @media (min-width: 768px) { .container { padding: 0 3rem; } }
+
+  .container-narrow {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  @media (min-width: 768px) { .container-narrow { padding: 0 3rem; } }
+
+  /* Header */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .logo {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .logo-mark {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #ffffff;
+    border: 1.5px solid var(--accent);
+    position: relative;
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    inset: 4px 4px auto auto;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+  }
+
+  .nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .lang-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--ink-mute);
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    padding: 0.35rem 0.4rem;
+    color: var(--ink-mute);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.25s ease;
+  }
+  .lang-btn:hover { color: var(--ink); }
+  .lang-btn.active { color: var(--ink); }
+  .lang-sep { color: var(--line); }
+
+  .back-link {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.25s ease;
+  }
+  .back-link:hover { color: var(--accent); }
+  .back-link svg { transition: transform 0.25s ease; }
+  .back-link:hover svg { transform: translateX(-3px); }
+
+  /* Content */
+  main { padding: 4rem 0 6rem; }
+  @media (min-width: 1024px) { main { padding: 6rem 0 8rem; } }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  h1.display {
+    font-size: clamp(2.25rem, 5vw, 3.85rem);
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin: 0 0 1.25rem;
+  }
+  .lead {
+    font-size: 0.88rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    margin: 3rem 0 1rem;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 1.75rem 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  p {
+    margin: 0 0 1.1rem;
+    color: var(--ink-soft);
+    max-width: 42rem;
+  }
+  p strong { color: var(--ink); font-weight: 500; }
+  a.inline {
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+  a.inline:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  ul {
+    padding-left: 1.15rem;
+    margin: 0 0 1.25rem;
+  }
+  ul li {
+    margin-bottom: 0.45rem;
+    color: var(--ink-soft);
+  }
+
+  /* Footer */
+  footer.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 3rem 0 2rem;
+    background: var(--bg);
+  }
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  @media (min-width: 768px) {
+    .footer-row { flex-direction: row; align-items: center; justify-content: space-between; }
+  }
+  .footer-row .meta {
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+  }
+  .footer-row .privacy-link {
+    font-size: 0.82rem;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+  }
+  .footer-row .privacy-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .nav-tools .back-link span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="logo" aria-label="Daniele Mele — Startseite">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span>Daniele Mele</span>
+    </a>
+    <div class="nav-tools">
+      <div class="lang-wrap" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="de" type="button">DE</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="fr" type="button">FR</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="it" type="button">IT</button>
+      </div>
+      <a href="/" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L5 7l4 4"/></svg>
+        <span data-i18n="back">Zurück</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container-narrow">
+    <span class="eyebrow" data-i18n="eyebrow">Rechtliches</span>
+    <h1 class="display" data-i18n="title">Datenschutzerklärung</h1>
+    <p class="lead" data-i18n="updated">Stand: 10. April 2026</p>
+
+    <h2 data-i18n="s1.t">1. Verantwortlicher</h2>
+    <p data-i18n="s1.p">Verantwortlich für die Datenverarbeitung auf dieser Website ist Daniele Mele, Schweiz. Bei Fragen zum Datenschutz erreichen Sie mich jederzeit per E-Mail unter hello@danielemele.ch.</p>
+
+    <h2 data-i18n="s2.t">2. Welche Daten ich erhebe</h2>
+    <p data-i18n="s2.p">Ich erhebe nur die Daten, die Sie mir aktiv übermitteln, sowie technische Daten, die beim Aufruf der Website zwangsläufig anfallen.</p>
+
+    <h3 data-i18n="s2a.t">Kontaktformular</h3>
+    <p data-i18n="s2a.p">Wenn Sie das Kontaktformular nutzen, verarbeite ich Ihren Namen, Ihre E-Mail-Adresse, optional Ihren Firmennamen und LinkedIn-Link sowie den Inhalt Ihrer Nachricht. Zweck der Verarbeitung ist die Beantwortung Ihrer Anfrage. Rechtsgrundlage ist die Anbahnung eines Vertragsverhältnisses beziehungsweise mein berechtigtes Interesse, Anfragen beantworten zu können.</p>
+
+    <h3 data-i18n="s2b.t">Server-Logs</h3>
+    <p data-i18n="s2b.p">Beim Aufruf der Website werden automatisch technische Informationen wie IP-Adresse, Zeitpunkt und aufgerufene Seite in den Logdateien des Hosting-Anbieters gespeichert. Diese Daten werden nicht mit anderen Quellen zusammengeführt und dienen ausschliesslich dem sicheren Betrieb der Website.</p>
+
+    <h2 data-i18n="s3.t">3. Dienste von Drittanbietern</h2>
+    <p data-i18n="s3.p">Diese Website nutzt die folgenden externen Dienste. Dabei können personenbezogene Daten an Server im Ausland übermittelt werden.</p>
+
+    <h3>Vercel Inc.</h3>
+    <p data-i18n="s3.vercel">Die Website wird auf Vercel (USA) gehostet. Vercel verarbeitet technische Zugriffsdaten und bietet zusätzlich Web Analytics sowie Speed Insights. Diese Dienste erfassen aggregierte, anonymisierte Nutzungsdaten ohne Cookies und ohne dauerhafte Identifikatoren.</p>
+
+    <h3>Formsubmit.co</h3>
+    <p data-i18n="s3.formsubmit">Das Kontaktformular wird über Formsubmit.co verarbeitet. Die dort übermittelten Eingaben werden per E-Mail an mich weitergeleitet und nicht dauerhaft auf fremden Servern gespeichert.</p>
+
+    <h3>Google Fonts</h3>
+    <p data-i18n="s3.gfonts">Zur einheitlichen Darstellung der Schrift wird die Schriftart „Inter" über Google Fonts (Google Ireland Ltd.) geladen. Dabei wird Ihre IP-Adresse an Google übertragen.</p>
+
+    <h2 data-i18n="s4.t">4. Cookies und lokaler Speicher</h2>
+    <p data-i18n="s4.p">Diese Website setzt keine Tracking-Cookies. Im lokalen Speicher Ihres Browsers (localStorage) wird lediglich Ihre Sprachpräferenz abgelegt, damit die Seite beim nächsten Besuch in derselben Sprache erscheint. Diese Information verlässt Ihren Browser nicht.</p>
+
+    <h2 data-i18n="s5.t">5. Speicherdauer</h2>
+    <p data-i18n="s5.p">Ihre Anfragedaten bewahre ich so lange auf, wie es für die Bearbeitung notwendig ist, längstens jedoch zwölf Monate, sofern keine gesetzliche Aufbewahrungspflicht entgegensteht.</p>
+
+    <h2 data-i18n="s6.t">6. Ihre Rechte</h2>
+    <p data-i18n="s6.p">Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten Daten, auf Berichtigung, Löschung, Einschränkung der Verarbeitung sowie auf Datenübertragbarkeit. Sie können einer Verarbeitung widersprechen und eine erteilte Einwilligung jederzeit widerrufen. Zur Ausübung Ihrer Rechte genügt eine formlose Nachricht an <a class="inline" href="mailto:hello@danielemele.ch">hello@danielemele.ch</a>.</p>
+
+    <h2 data-i18n="s7.t">7. Änderungen dieser Erklärung</h2>
+    <p data-i18n="s7.p">Ich behalte mir vor, diese Datenschutzerklärung anzupassen, etwa bei Änderungen der verwendeten Dienste oder der Rechtslage. Es gilt jeweils die auf dieser Seite veröffentlichte aktuelle Fassung.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <a href="/" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span>Daniele Mele</span>
+    </a>
+    <a href="/privacy.html" class="privacy-link" data-i18n="footer.privacy">Datenschutz</a>
+    <div class="meta">
+      © <span id="year"></span> Daniele Mele · <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    de: {
+      meta: {
+        title: "Datenschutz — Daniele Mele",
+        description: "Datenschutzerklärung — Daniele Mele, Webdesign & Webentwicklung aus der Schweiz."
+      },
+      back: "Zurück",
+      eyebrow: "Rechtliches",
+      title: "Datenschutzerklärung",
+      updated: "Stand: 10. April 2026",
+      s1: {
+        t: "1. Verantwortlicher",
+        p: "Verantwortlich für die Datenverarbeitung auf dieser Website ist Daniele Mele, Schweiz. Bei Fragen zum Datenschutz erreichen Sie mich jederzeit per E-Mail unter hello@danielemele.ch."
+      },
+      s2: {
+        t: "2. Welche Daten ich erhebe",
+        p: "Ich erhebe nur die Daten, die Sie mir aktiv übermitteln, sowie technische Daten, die beim Aufruf der Website zwangsläufig anfallen."
+      },
+      s2a: {
+        t: "Kontaktformular",
+        p: "Wenn Sie das Kontaktformular nutzen, verarbeite ich Ihren Namen, Ihre E-Mail-Adresse, optional Ihren Firmennamen und LinkedIn-Link sowie den Inhalt Ihrer Nachricht. Zweck der Verarbeitung ist die Beantwortung Ihrer Anfrage. Rechtsgrundlage ist die Anbahnung eines Vertragsverhältnisses beziehungsweise mein berechtigtes Interesse, Anfragen beantworten zu können."
+      },
+      s2b: {
+        t: "Server-Logs",
+        p: "Beim Aufruf der Website werden automatisch technische Informationen wie IP-Adresse, Zeitpunkt und aufgerufene Seite in den Logdateien des Hosting-Anbieters gespeichert. Diese Daten werden nicht mit anderen Quellen zusammengeführt und dienen ausschliesslich dem sicheren Betrieb der Website."
+      },
+      s3: {
+        t: "3. Dienste von Drittanbietern",
+        p: "Diese Website nutzt die folgenden externen Dienste. Dabei können personenbezogene Daten an Server im Ausland übermittelt werden.",
+        vercel: "Die Website wird auf Vercel (USA) gehostet. Vercel verarbeitet technische Zugriffsdaten und bietet zusätzlich Web Analytics sowie Speed Insights. Diese Dienste erfassen aggregierte, anonymisierte Nutzungsdaten ohne Cookies und ohne dauerhafte Identifikatoren.",
+        formsubmit: "Das Kontaktformular wird über Formsubmit.co verarbeitet. Die dort übermittelten Eingaben werden per E-Mail an mich weitergeleitet und nicht dauerhaft auf fremden Servern gespeichert.",
+        gfonts: "Zur einheitlichen Darstellung der Schrift wird die Schriftart „Inter\" über Google Fonts (Google Ireland Ltd.) geladen. Dabei wird Ihre IP-Adresse an Google übertragen."
+      },
+      s4: {
+        t: "4. Cookies und lokaler Speicher",
+        p: "Diese Website setzt keine Tracking-Cookies. Im lokalen Speicher Ihres Browsers (localStorage) wird lediglich Ihre Sprachpräferenz abgelegt, damit die Seite beim nächsten Besuch in derselben Sprache erscheint. Diese Information verlässt Ihren Browser nicht."
+      },
+      s5: {
+        t: "5. Speicherdauer",
+        p: "Ihre Anfragedaten bewahre ich so lange auf, wie es für die Bearbeitung notwendig ist, längstens jedoch zwölf Monate, sofern keine gesetzliche Aufbewahrungspflicht entgegensteht."
+      },
+      s6: {
+        t: "6. Ihre Rechte",
+        p: 'Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten Daten, auf Berichtigung, Löschung, Einschränkung der Verarbeitung sowie auf Datenübertragbarkeit. Sie können einer Verarbeitung widersprechen und eine erteilte Einwilligung jederzeit widerrufen. Zur Ausübung Ihrer Rechte genügt eine formlose Nachricht an <a class="inline" href="mailto:hello@danielemele.ch">hello@danielemele.ch</a>.'
+      },
+      s7: {
+        t: "7. Änderungen dieser Erklärung",
+        p: "Ich behalte mir vor, diese Datenschutzerklärung anzupassen, etwa bei Änderungen der verwendeten Dienste oder der Rechtslage. Es gilt jeweils die auf dieser Seite veröffentlichte aktuelle Fassung."
+      },
+      footer: { privacy: "Datenschutz", rights: "Alle Rechte vorbehalten." }
+    },
+
+    en: {
+      meta: {
+        title: "Privacy — Daniele Mele",
+        description: "Privacy policy — Daniele Mele, web design & development, Switzerland."
+      },
+      back: "Back",
+      eyebrow: "Legal",
+      title: "Privacy policy",
+      updated: "Last updated: 10 April 2026",
+      s1: {
+        t: "1. Data controller",
+        p: "The party responsible for data processing on this website is Daniele Mele, Switzerland. For any privacy-related question, you can reach me at hello@danielemele.ch."
+      },
+      s2: {
+        t: "2. What data I collect",
+        p: "I only collect data you actively provide, plus the technical data that is inevitably generated when the website is accessed."
+      },
+      s2a: {
+        t: "Contact form",
+        p: "When you use the contact form, I process your name, email address, optionally your company name and LinkedIn link, and the content of your message. The purpose is to reply to your inquiry. The legal basis is the initiation of a contractual relationship and my legitimate interest in responding to inquiries."
+      },
+      s2b: {
+        t: "Server logs",
+        p: "When you access the website, technical information such as your IP address, access time and requested page is automatically recorded in the hosting provider's log files. This data is not combined with other sources and is used exclusively to operate the website securely."
+      },
+      s3: {
+        t: "3. Third-party services",
+        p: "This website uses the following external services. Personal data may be transmitted to servers located outside Switzerland and the EU.",
+        vercel: "The website is hosted on Vercel (USA). Vercel processes technical access data and additionally provides Web Analytics and Speed Insights. These services collect aggregated, anonymous usage data without cookies or persistent identifiers.",
+        formsubmit: "The contact form is processed via Formsubmit.co. Submitted input is forwarded to me by email and is not permanently stored on third-party servers.",
+        gfonts: 'For consistent typography, the "Inter" font is loaded via Google Fonts (Google Ireland Ltd.). Your IP address is transmitted to Google in the process.'
+      },
+      s4: {
+        t: "4. Cookies and local storage",
+        p: "This website does not set any tracking cookies. Your browser's localStorage is used only to remember your language preference so that the site appears in the same language on your next visit. This information never leaves your browser."
+      },
+      s5: {
+        t: "5. Retention period",
+        p: "I keep your inquiry data only for as long as it is needed to respond, and no longer than twelve months, unless a legal retention obligation applies."
+      },
+      s6: {
+        t: "6. Your rights",
+        p: 'You have the right, at any time, to access your stored data, to have it corrected or deleted, to restrict its processing, and to data portability. You may object to processing and withdraw any consent you have given. A simple email to <a class="inline" href="mailto:hello@danielemele.ch">hello@danielemele.ch</a> is enough to exercise your rights.'
+      },
+      s7: {
+        t: "7. Changes to this policy",
+        p: "I reserve the right to update this privacy policy, for example if the services used or the legal framework change. The version published on this page at any given time is the one that applies."
+      },
+      footer: { privacy: "Privacy", rights: "All rights reserved." }
+    },
+
+    fr: {
+      meta: {
+        title: "Confidentialité — Daniele Mele",
+        description: "Politique de confidentialité — Daniele Mele, conception et développement web, Suisse."
+      },
+      back: "Retour",
+      eyebrow: "Mentions légales",
+      title: "Politique de confidentialité",
+      updated: "Dernière mise à jour : 10 avril 2026",
+      s1: {
+        t: "1. Responsable du traitement",
+        p: "Le responsable du traitement des données sur ce site est Daniele Mele, Suisse. Pour toute question relative à la protection des données, vous pouvez me joindre par e-mail à hello@danielemele.ch."
+      },
+      s2: {
+        t: "2. Quelles données je collecte",
+        p: "Je ne collecte que les données que vous me transmettez activement, ainsi que les données techniques inévitablement générées lors de la consultation du site."
+      },
+      s2a: {
+        t: "Formulaire de contact",
+        p: "Lorsque vous utilisez le formulaire de contact, je traite votre nom, votre adresse e-mail, éventuellement le nom de votre entreprise et votre lien LinkedIn, ainsi que le contenu de votre message. La finalité est de répondre à votre demande. La base légale est l'exécution de mesures précontractuelles et mon intérêt légitime à pouvoir répondre aux demandes."
+      },
+      s2b: {
+        t: "Journaux du serveur",
+        p: "Lors de la consultation du site, des informations techniques telles que votre adresse IP, l'horodatage et la page consultée sont automatiquement enregistrées dans les journaux du prestataire d'hébergement. Ces données ne sont pas recoupées avec d'autres sources et servent exclusivement au fonctionnement sécurisé du site."
+      },
+      s3: {
+        t: "3. Services de tiers",
+        p: "Ce site utilise les services externes suivants. Des données personnelles peuvent être transmises à des serveurs situés hors de Suisse et de l'UE.",
+        vercel: "Le site est hébergé par Vercel (États-Unis). Vercel traite les données techniques d'accès et propose également Web Analytics et Speed Insights. Ces services collectent des données d'utilisation agrégées et anonymes, sans cookies ni identifiants persistants.",
+        formsubmit: "Le formulaire de contact est traité par Formsubmit.co. Les données transmises me sont retransmises par e-mail et ne sont pas stockées durablement sur des serveurs tiers.",
+        gfonts: "Pour une typographie uniforme, la police « Inter » est chargée via Google Fonts (Google Ireland Ltd.). Votre adresse IP est transmise à Google lors de ce processus."
+      },
+      s4: {
+        t: "4. Cookies et stockage local",
+        p: "Ce site n'installe aucun cookie de suivi. Le stockage local de votre navigateur (localStorage) n'est utilisé que pour mémoriser votre préférence de langue afin que le site s'affiche dans la même langue lors de votre prochaine visite. Cette information ne quitte jamais votre navigateur."
+      },
+      s5: {
+        t: "5. Durée de conservation",
+        p: "Je conserve les données de votre demande aussi longtemps que nécessaire à leur traitement, et au maximum douze mois, sauf obligation légale de conservation plus longue."
+      },
+      s6: {
+        t: "6. Vos droits",
+        p: 'Vous disposez à tout moment du droit d\'accéder à vos données, de les rectifier, de les supprimer, d\'en limiter le traitement ainsi que du droit à la portabilité. Vous pouvez vous opposer au traitement et retirer un consentement donné à tout moment. Un simple e-mail à <a class="inline" href="mailto:hello@danielemele.ch">hello@danielemele.ch</a> suffit pour exercer vos droits.'
+      },
+      s7: {
+        t: "7. Modifications de cette politique",
+        p: "Je me réserve le droit d'adapter cette politique de confidentialité, par exemple en cas de modification des services utilisés ou du cadre légal. La version applicable est celle publiée à un instant donné sur cette page."
+      },
+      footer: { privacy: "Confidentialité", rights: "Tous droits réservés." }
+    },
+
+    it: {
+      meta: {
+        title: "Privacy — Daniele Mele",
+        description: "Informativa sulla privacy — Daniele Mele, web design e sviluppo, Svizzera."
+      },
+      back: "Indietro",
+      eyebrow: "Note legali",
+      title: "Informativa sulla privacy",
+      updated: "Ultimo aggiornamento: 10 aprile 2026",
+      s1: {
+        t: "1. Titolare del trattamento",
+        p: "Titolare del trattamento dei dati su questo sito è Daniele Mele, Svizzera. Per qualsiasi questione riguardante la privacy potete contattarmi via e-mail all'indirizzo hello@danielemele.ch."
+      },
+      s2: {
+        t: "2. Quali dati raccolgo",
+        p: "Raccolgo solo i dati che mi fornite attivamente, oltre ai dati tecnici che vengono inevitabilmente generati quando il sito viene visitato."
+      },
+      s2a: {
+        t: "Modulo di contatto",
+        p: "Quando utilizzate il modulo di contatto, tratto il vostro nome, l'indirizzo e-mail, eventualmente il nome della vostra azienda e il link LinkedIn, nonché il contenuto del messaggio. La finalità è rispondere alla vostra richiesta. La base giuridica è l'esecuzione di misure precontrattuali e il mio legittimo interesse a poter rispondere alle richieste."
+      },
+      s2b: {
+        t: "Log del server",
+        p: "Quando visitate il sito vengono automaticamente registrate informazioni tecniche come il vostro indirizzo IP, l'orario e la pagina richiesta nei file di log del provider di hosting. Questi dati non vengono incrociati con altre fonti e servono esclusivamente al funzionamento sicuro del sito."
+      },
+      s3: {
+        t: "3. Servizi di terze parti",
+        p: "Questo sito utilizza i seguenti servizi esterni. In questo contesto, dati personali possono essere trasmessi a server al di fuori della Svizzera e dell'UE.",
+        vercel: "Il sito è ospitato su Vercel (USA). Vercel tratta dati tecnici di accesso e mette inoltre a disposizione Web Analytics e Speed Insights. Questi servizi raccolgono dati di utilizzo aggregati e anonimi, senza cookie né identificatori persistenti.",
+        formsubmit: "Il modulo di contatto è gestito tramite Formsubmit.co. I dati inviati vengono inoltrati a me via e-mail e non vengono conservati in modo permanente su server di terzi.",
+        gfonts: "Per garantire una tipografia uniforme, il carattere «Inter» viene caricato tramite Google Fonts (Google Ireland Ltd.). In questo processo il vostro indirizzo IP viene trasmesso a Google."
+      },
+      s4: {
+        t: "4. Cookie e memoria locale",
+        p: "Questo sito non imposta cookie di tracciamento. La memoria locale del browser (localStorage) viene usata solo per ricordare la vostra preferenza di lingua, affinché il sito appaia nella stessa lingua alla visita successiva. Questa informazione non lascia mai il vostro browser."
+      },
+      s5: {
+        t: "5. Periodo di conservazione",
+        p: "Conservo i dati della vostra richiesta per il tempo necessario alla loro elaborazione e al massimo per dodici mesi, salvo obblighi legali di conservazione più lunghi."
+      },
+      s6: {
+        t: "6. I vostri diritti",
+        p: 'Avete in ogni momento il diritto di accedere ai vostri dati, di ottenerne la rettifica o la cancellazione, di limitarne il trattamento e alla portabilità dei dati. Potete opporvi al trattamento e revocare in qualsiasi momento un consenso prestato. Una semplice e-mail a <a class="inline" href="mailto:hello@danielemele.ch">hello@danielemele.ch</a> è sufficiente per esercitare i vostri diritti.'
+      },
+      s7: {
+        t: "7. Modifiche a questa informativa",
+        p: "Mi riservo il diritto di adeguare questa informativa sulla privacy, ad esempio in caso di cambiamenti dei servizi utilizzati o del quadro normativo. Si applica di volta in volta la versione pubblicata su questa pagina."
+      },
+      footer: { privacy: "Privacy", rights: "Tutti i diritti riservati." }
+    }
+  };
+
+  function getPath(o, p) { return p.split('.').reduce((a, k) => (a && a[k] !== undefined) ? a[k] : undefined, o); }
+
+  function applyLang(lang) {
+    const dict = I18N[lang] || I18N.de;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const v = getPath(dict, el.dataset.i18n);
+      if (typeof v === 'string') {
+        if (el.tagName === 'META') el.setAttribute('content', v);
+        else if (el.tagName === 'TITLE') el.textContent = v;
+        else if (el.dataset.i18n === 's6.p') el.innerHTML = v;
+        else el.textContent = v;
+      }
+    });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+  (function initLang() {
+    let saved;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    applyLang(saved && I18N[saved] ? saved : 'de');
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Vercel Web Analytics -->
+<script defer src="/_vercel/insights/script.js"></script>
+<!-- Vercel Speed Insights -->
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
+</body>
+</html>
