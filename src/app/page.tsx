@@ -397,7 +397,7 @@ export default function Home() {
                 ))}
               </div>
               <ThemeToggle dark={dark} onToggle={toggleTheme} />
-              <a href="#contact" className="hidden px-6 py-3 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-90 lg:inline-flex" style={{ background: "var(--btn-primary-bg)", color: "var(--btn-primary-text)" }}>{t.nav.cta}</a>
+              <a href="#contact" className="hidden rounded-full px-8 py-3.5 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-90 lg:inline-flex" style={{ background: "var(--btn-primary-bg)", color: "var(--btn-primary-text)" }}>{t.nav.cta}</a>
               <button className="inline-flex border p-2 lg:hidden" style={{ borderColor: "var(--line)", color: "var(--ink)", background: "none" }} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">{mobileOpen ? <X size={20} /> : <Menu size={20} />}</button>
             </div>
           </div>
@@ -527,7 +527,7 @@ export default function Home() {
                     </div>
                     <p className="mt-5 text-[0.92rem] transition-colors duration-500" style={{ color: "var(--ink-mute)" }}>{t.price.amountSub}</p>
                     <div className="mt-10">
-                      <a href="#contact" className="inline-flex items-center gap-2 px-7 py-4 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-90" style={{ background: "var(--btn-primary-bg)", color: "var(--btn-primary-text)" }}>{t.price.cta}</a>
+                      <a href="#contact" className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-90" style={{ background: "var(--btn-primary-bg)", color: "var(--btn-primary-text)" }}>{t.price.cta}</a>
                     </div>
                   </div>
                   <ul className="m-0 columns-1 list-none p-0 md:columns-2 md:gap-12">
@@ -565,7 +565,7 @@ export default function Home() {
                       <div className="md:col-span-2"><FormField label={t.contact.form.message} name="message" type="textarea" placeholder={t.contact.form.placeholder} /></div>
                       <div className="absolute left-[-9999px] h-px w-px opacity-0" aria-hidden="true"><label>Do not fill<input type="text" name="_honey" tabIndex={-1} autoComplete="off" /></label></div>
                       <div className="md:col-span-2">
-                        <button type="submit" disabled={sending} className="inline-flex items-center gap-2 px-7 py-4 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-90 disabled:opacity-60" style={{ background: "var(--btn-primary-bg)", color: "var(--btn-primary-text)" }}>
+                        <button type="submit" disabled={sending} className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-90 disabled:opacity-60" style={{ background: "var(--btn-primary-bg)", color: "var(--btn-primary-text)" }}>
                           {sending ? t.contact.form.sending : t.contact.form.submit}
                         </button>
                       </div>
@@ -575,7 +575,7 @@ export default function Home() {
                       <div className="mb-2 flex h-14 w-14 items-center justify-center rounded-full transition-colors duration-500" style={{ background: "var(--brand-accent)", color: "var(--btn-primary-text)", animation: "check-pop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.4) both" }}><Check size={24} strokeWidth={2.5} /></div>
                       <h3 className="transition-colors duration-500" style={{ fontSize: "clamp(1.75rem, 3.6vw, 2.75rem)", fontWeight: 500, letterSpacing: "-0.025em", lineHeight: 1.1, color: "var(--ink)" }}>{t.contact.form.sentTitle}</h3>
                       <p className="max-w-[32rem] text-[1.05rem] leading-relaxed transition-colors duration-500" style={{ color: "var(--ink-soft)" }}>{t.contact.form.sentDesc}</p>
-                      <a href="#top" className="mt-3 inline-flex items-center gap-2 border px-7 py-4 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-80" style={{ borderColor: "var(--btn-secondary-border)", color: "var(--btn-secondary-text)", background: "var(--btn-secondary-bg)" }}>{t.contact.form.sentBack}</a>
+                      <a href="#top" className="mt-3 inline-flex items-center gap-2 rounded-full border px-8 py-3.5 text-[0.92rem] font-medium transition-colors duration-300 hover:opacity-80" style={{ borderColor: "var(--btn-secondary-border)", color: "var(--btn-secondary-text)", background: "var(--btn-secondary-bg)" }}>{t.contact.form.sentBack}</a>
                     </div>
                   )}
                 </Reveal>
